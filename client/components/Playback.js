@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { connect } from 'react-redux';
 import { Image, Card, Grid } from 'semantic-ui-react';
-import RTCMultiConnection from 'rtcmulticonnection-v3';
+import RTCMultiConnection from 'rtcmulticonnection';
 import MediaElement from './MediaElement';
 
 

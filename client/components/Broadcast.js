@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import io from 'socket.io-client';
 window.io = io;
-import RTCMultiConnection from 'rtcmulticonnection-v3';
+import RTCMultiConnection from 'rtcmulticonnection';
 import { connect } from 'react-redux';
 import MediaElement from './MediaElement';
 import { Image, Button } from 'semantic-ui-react';
