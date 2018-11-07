@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import {connect} from 'react-redux';
 import { Button, TextArea, Form } from 'semantic-ui-react';
 import { updateUserThunk } from '../store';
