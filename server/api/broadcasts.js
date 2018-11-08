@@ -113,3 +113,16 @@ router.put('/:id/is-live', (req, res, next) => {
     })
     .catch(next);
 });
+
+router.delete('/:id/delete', (req, res, next) => {
+  const id = req.params.id;
+  Broadcast.destroy({
+    where: {
+      id: id
+    }
+  })
+    .then(deleteRes => {
+      res.json(deleteRes)
+    })
+    .catch(next());
+});

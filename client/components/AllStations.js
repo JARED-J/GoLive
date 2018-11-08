@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchStations } from '../store';
 import { Link } from 'react-router-dom';
-import { Grid, Card, Image } from 'semantic-ui-react';
+import { Card, Image } from 'semantic-ui-react';
 
 export class AllStations extends Component {
   componentDidMount() {

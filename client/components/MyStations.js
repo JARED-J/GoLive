@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
 import { Card, Image } from 'semantic-ui-react';
 import {fetchStationsByUserId} from '../store';
+import {StationCard} from './index';
 
 /**
  * CONTAINER
@@ -32,7 +33,9 @@ export class MyStations extends Component {
     const stations = this.props.stationsByUser;
     return (
       <div className="myStations full-height">
-        <h1 className="margin-top white-font">{stations.length ? 'My Stations' : 'Welcome! You should create a station!'}</h1>
+        <h1 className="margin-top white-font">
+          {stations.length ? 'My Stations' : 'No stations yet!'}
+        </h1>
         <div className="wide-left stations">
           {stations && stations.map(station => {
             return (
@@ -57,6 +60,11 @@ export class MyStations extends Component {
                 </Card.Content>
               </Card>
             );
+          })}
+        </div>
+        <div>
+          {stations && stations.map(station => {
+            return <StationCard key={station.id} props={station} />;
           })}
         </div>
       </div>

@@ -43,7 +43,7 @@ class Routes extends Component {
               <Route path="/home" component={UserHome} />
               <Route path="/myAccount" component={MyAccount} />
               <Route path="/myStations" component={MyStations} />
-            </Switch>
+          </Switch>
         }
         {/* Displays our Login component as a fallback */}
         <Route component={Login} />
